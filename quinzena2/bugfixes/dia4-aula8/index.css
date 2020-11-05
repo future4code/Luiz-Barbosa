@@ -65,6 +65,10 @@ div img {
 }
 .tabela {
     text-align: center;
+    
+}
+table {
+    margin: auto;
 }
 
 .sample-image {
