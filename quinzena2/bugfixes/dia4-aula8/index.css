@@ -143,7 +143,9 @@ td button {
     height: 100px;
 }
 
-
+#btnContainer {
+    position: relative;
+}
 #back-button {
     background-color: black;
     width: 100px;
@@ -152,6 +154,7 @@ td button {
     border-radius: 5px;
     font-size: 10px;
     color: white;
+    text-align: center;
 }
 
 #back-button:hover {
