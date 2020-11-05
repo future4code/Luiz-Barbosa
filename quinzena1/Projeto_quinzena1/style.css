@@ -1,0 +1,36 @@
+html body {
+    font-family: 'Mulish', sans-serif;
+    background-color: #393e46;
+    color: #eeeeee;
+}
+
+#navBar {
+    color: #eeeeee;
+    padding: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #00adb5;
+    
+}
+li {
+    display: inline;
+    padding: 24px;
+}
+
+#printedProject {
+    width: 50%;
+    display: block;
+
+}
+
+.icons {
+    display: inline;
+    width: 20px;
+    height: 20px;
+    
+}
