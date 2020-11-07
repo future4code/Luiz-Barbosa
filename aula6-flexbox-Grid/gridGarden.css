@@ -16,26 +16,30 @@
   grid-column-end: 2
   }
 
-  #water {
+#water {
     grid-column-start: 1;
   grid-column-end: -2
   }
 
-  #poison {
+#poison {
     grid-column-start: -3
     }
 
-    #water {
+#water {
         grid-column-start: 2;
       grid-column-end: span 2
       }
 
-      #water {
+#water {
         grid-column-start: 1;
       grid-column-end: span 5
       }
 
-      #water {
+#water {
         grid-column-start: span 3
           grid-column-end: 6;
         }
+
+#water {
+grid-column: 4/6;
+}
