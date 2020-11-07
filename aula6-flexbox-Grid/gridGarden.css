@@ -34,3 +34,8 @@
         grid-column-start: 1;
       grid-column-end: span 5
       }
+
+      #water {
+        grid-column-start: span 3
+          grid-column-end: 6;
+        }
