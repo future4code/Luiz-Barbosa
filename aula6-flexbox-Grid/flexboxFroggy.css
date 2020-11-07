@@ -22,3 +22,9 @@
     display: flex;
   align-items: flex-end
   }
+
+  #pond {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  }
