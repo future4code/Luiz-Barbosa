@@ -24,3 +24,8 @@
   #poison {
     grid-column-start: -3
     }
+
+    #water {
+        grid-column-start: 2;
+      grid-column-end: span 2
+      }
