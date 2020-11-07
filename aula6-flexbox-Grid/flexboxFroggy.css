@@ -28,3 +28,9 @@
   justify-content: center;
   align-items: center;
   }
+
+  #pond {
+    display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  }
