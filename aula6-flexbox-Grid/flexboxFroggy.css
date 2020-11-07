@@ -104,3 +104,8 @@
   order: 1;
   align-self: flex-end;
   }
+
+  #pond {
+    display: flex;
+  flex-wrap: wrap;
+  }
