@@ -1,3 +1,7 @@
 #water {
     grid-column-start:3
     }
+
+    #poison {
+        grid-column-start: 5
+        }
