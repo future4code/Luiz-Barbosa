@@ -2,3 +2,8 @@
     display: flex;
   justify-content: flex-end;
   }
+
+  #pond {
+    display: flex;
+  justify-content: center
+  }
