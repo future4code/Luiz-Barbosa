@@ -43,3 +43,7 @@
 #water {
 grid-column: 4/6;
 }
+
+#water {
+    grid-column: 2/5
+    }
