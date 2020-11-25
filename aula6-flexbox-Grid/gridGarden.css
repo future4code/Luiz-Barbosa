@@ -38,7 +38,7 @@
 #water {
         grid-column-start: span 3
           grid-column-end: 6;
-        }
+  }
 
 #water {
 grid-column: 4/6;
@@ -47,3 +47,11 @@ grid-column: 4/6;
 #water {
     grid-column: 2/5
     }
+
+    #water {
+      grid-row-start:3;
+      }
+
+      #water {
+        grid-row: 3/6
+        }
