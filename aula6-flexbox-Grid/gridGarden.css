@@ -122,3 +122,7 @@ grid-template-rows: 50px 0fr 0fr 0fr
 }
 /* Confesso que tive que olhar a resposta desse aqui, poderia me explicar o motivo de 0fr? :( */
 
+#garden {
+  display: grid;
+grid-template: 60%/200px
+}
