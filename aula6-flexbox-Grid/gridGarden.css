@@ -67,3 +67,7 @@ grid-column: 4/6;
             #water {
               grid-area: 1/2/4/6
               }
+
+              #water-2 {
+                grid-area: 2/3/5/6
+                }
