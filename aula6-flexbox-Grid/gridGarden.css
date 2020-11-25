@@ -55,3 +55,8 @@ grid-column: 4/6;
       #water {
         grid-row: 3/6
         }
+
+        #poison {
+          grid-column-start: 2;
+          grid-row-start:5;
+          }
