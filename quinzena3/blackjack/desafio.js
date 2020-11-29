@@ -27,9 +27,9 @@ if(confirm("Quer iniciar uma nova rodada?")) {
 }
 
 // Se as primeiras cartas forem A, sortear de novo
-// if (primeiraComputador || primeiraUsuario === "A") {
-//    comprarCarta();
-// } 
+if (primeiraComputador || primeiraUsuario === "A") {
+    comprarCarta();
+   } 
 
 //Aqui o jogo pergunta se deve sortear mais cartas.
 
@@ -47,9 +47,9 @@ const cartasExtraUsuario = [];
 
 
 
-for (confirm("Quer iniciar uma rodada?"); confirm("Deseja outra carta?"); comprarCarta()) {
-   cartasExtraUsuario.push()
-   console.log(cartasExtraUsuario.texto)
+for (confirm("Quer tirar mais cartas?"); confirm("Deseja outra carta?"); comprarCarta()) {
+   cartasExtraUsuario.push(cartasExtraUsuario.value)
+   console.log(cartasExtraUsuario.value)
 }
  
 
@@ -60,3 +60,5 @@ if (pontosUsuario > pontosComputador) {
    } else {
       console.log("Empatou!")
    }
+
+   // não consigo mais pensar em como fazer kkkk sorry

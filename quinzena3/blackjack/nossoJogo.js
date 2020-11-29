@@ -21,11 +21,16 @@ if (pontosUsuario > pontosComputador) {
    console.log("O usuário ganhou!")
 } else if (pontosComputador < pontosComputador) {
    console.log("O computador venceu!")
-   } else if (pontosComputador === pontosUsuario) {
+   } else if (pontosComputador == pontosUsuario) {
       console.log("Empatou")
-   } else(" {
+   } else {
       console.log("O jogo acabou")
    }
+
+
+   // Estou com esse problema infernal onde de alguma forma o jogo dá empate mesmo com os numeros sendo diferentes!! Nada resolve!!!
+   //O estranho é que às vezes funciona certo e às vezes não. 
+
 // console.log(primeiraUsuario.texto) 
 // console.log(primeiraUsuario.valor) 
 
