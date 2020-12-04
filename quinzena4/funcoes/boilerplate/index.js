@@ -182,3 +182,74 @@ a. Escreva uma função que receba um array de números e devolva a quantidade d
 // quantosPares(array)
 
 //era isso? kkk I don't know
+
+/*----------------------------------DESAFIO--------------------------------------*/
+
+
+//EXERCICIO 1
+
+/*Funções são trechos de códigos como quaisquer outros mas que podemos acessá-los mais de uma vez ao longo do código através de invocações/chamadas. Então, funções podem chamar/invocar outras funções também. Sua tarefa é escrever duas funções: 
+
+1.  Escreva uma *arrow function* que recebe um parâmetro e imprime no console esse parâmetro.*/
+
+// const imprimeParametro = (frase) => {
+//     console.log(frase)
+// }
+
+// imprimeParametro(prompt("Insira sua frase!"))
+
+/*2. Escreva outra *arrow function* que recebe dois valores como parâmetros mas **nenhum retorno.** Faça a soma entre esses valores e chame a sua primeira função mandando este resultado da soma como entrada para imprimí-lo.*/
+
+// const imprimeDoisParametros = (valor1, valor2) => {
+//      const soma = valor1 + valor2   
+//      imprimeParametro(soma)
+//  }
+
+//  const imprimeParametro = (soma) => {
+//           console.log(soma)
+//  }
+    
+// imprimeDoisParametros("Lady ", "Gaga")
+     
+
+
+//EXERCÍCIO 2
+
+/*Considere o seguinte array e utilize ele para os exercícios:
+a. Escreva uma função que receba um array como parâmetro e retorne um array com apenas os números pares e multiplicados por 2.*/
+
+// const numeros = [0, 8, 23, 16, 10, 15, 41, 12, 13]
+//  const multiplicaPares = (array) => {
+//      for (item of array) {
+//           if (item % 2 === 0) {
+//               console.log(item * 2)
+//           } else {
+//              console.log(item)
+//           }
+//      }
+// }
+
+// multiplicaPares(numeros)
+
+/*b. Escreva uma função que receba um array como parâmetro e retorne o maior número deste array. */
+// const numeros = [0, 8, 23, 16, 10, 15, 41, 12, 13]
+
+// const maiorNumero = (array) => {
+//     for(item of numeros) {
+//         numeros.reduce(numeros)
+//     }
+//     return Math.max(numeros)
+// }
+
+// const resultado = console.log(maiorNumero(numeros))
+/* c. Escreva uma função que receba um array como parâmetro e retorne o **índice** do maior número deste array.*/
+const numeros = [0, 8, 23, 16, 10, 15, 41, 12, 13]
+const indice = (array) => {
+    for (item of numeros) {
+        console.log(item.length)
+    }
+}
+
+indice()
+
+/*d. Escreva uma função que recebe um array como parâmetro e retorne este array invertido.*/
