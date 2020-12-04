@@ -86,17 +86,99 @@ Escreva as funções explicadas abaixo:
 
 a. Escreva uma função que receba 2 números como parâmetros, e, dentro da função, faça a soma das duas entradas e retorne o resultado. Invoque a função e imprima no console o resultado.*/ 
 
-const somatorio = (number1, number2) => {
-    let soma = number1 + number2
-    console.log(soma)
-}
+// const somatorio = (number1, number2) => {
+//     let soma = number1 + number2
+//     return soma
+// }
 
-somatorio(34, 35) 
+// const resultadoSoma = somatorio(34, 35) 
+// console.log(resultadoSoma)
 
 
 /*
-b. Faça uma função que recebe 2 números e retorne um booleano que informa se o primeiro número é **maior ou igual** ao segundo.
+b. Faça uma função que recebe 2 números e retorne um booleano que informa se o primeiro número é **maior ou igual** ao segundo. */
 
-c. Faça uma função que recebe uma mensagem (`string`) como parâmetro e imprima essa mensagem 10 vezes. (não é permitido escrever 10 `console.log` dentro da função, use outra estrutura de código para isso)*/
+// const maiorIgual = (number1, number2) => {
+//     if (number1 > number2) {
+//         console.log("O primeiro número é maior.")
+//     } else if (number1 === number2) {
+//         console.log("Os números são iguais")
+//     } else {
+//         console.log("Insira outro número!")
+//     }
+// }
+
+// maiorIgual(Number(prompt("Insira o primeiro número!")), Number(prompt("Insira o segundo número!")))
+
+/*c. Faça uma função que recebe uma mensagem (`string`) como parâmetro e imprima essa mensagem 10 vezes. (não é permitido escrever 10 `console.log` dentro da função, use outra estrutura de código para isso)*/
+
+// const texto = prompt("Insira uma frase")
+
+// const repeteString = () => {
+//     for (let i = 0; i < 10; i++) {
+//         console.log(texto)
+//     }
+// }
+
+// repeteString()
+
+/* EXERCÍCIO 6
+
+Para os itens a seguir, considere o seguinte array para os seus testes:
+
+a. Escreva uma função que receba um array de números e devolva a quantidade de elementos nele: */
+
+// const array = [10, 23, 45, 78, 90, 52, 35, 67, 84, 22]
+
+// const quantidadeElementos = () => {
+//     console.log(array.length)
+// }
+
+// quantidadeElementos(array)
+
+/*b. Escreva uma função que receba um número e devolva um booleano indicando se ele é par ou não*/
+
+// let parOuImpar = function (number1) {
+//     if (number1 % 2 === 0) {
+//         console.log(`${number1} é par`)
+//     } else {
+//         console.log(`${number1} não é par`)
+//     }
+// }
 
 
+// let respostaPar = parOuImpar(Number(prompt("Insira um número!")))
+
+
+/*c. Escreva uma função que receba um array de números e devolva a quantidade de números pares dentro dele*/
+
+// const array = [10, 23, 45, 78, 90, 52, 35, 67, 84, 22]
+// let quantosPares = function (array) {
+//     for (item of array) {
+//         if (item % 2 === 0) {
+//             console.log(item)
+//         } else {
+//             console.log("Deu ruim")
+//         }
+//     }
+// }
+
+// quantosPares(array)
+
+/*d. Reescreva seu código anterior (do item c) de tal forma que ele utilize a função do item b para verificar se o número é par*/
+
+
+// const array = [10, 23, 45, 78, 90, 52, 35, 67, 84, 22]
+// const quantosPares = function (array) {
+//     for (item of array) {
+//         if (item % 2 === 0) {
+//             console.log(`${item} é par`)
+//         } else {
+//             console.log(`${item} é ímpar`)
+//         }
+//     }
+// }
+
+// quantosPares(array)
+
+//era isso? kkk I don't know
