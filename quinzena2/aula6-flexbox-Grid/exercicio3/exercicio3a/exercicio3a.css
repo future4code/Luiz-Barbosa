@@ -1,0 +1,109 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    
+    
+
+}
+
+#main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 50vh 35vh 5vh;
+
+    
+}
+
+#top-container{
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+#middle-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    
+}
+
+#footer {
+    display: grid;
+    position: fixed;
+    bottom: 0;
+    
+}
+
+#content2 {
+    display: grid;
+    
+}
+
+
+
+#image {
+    display: grid;
+    grid-row: span;
+}
+
+#extra{
+    display: grid;
+    grid-row: span;
+}
+.green-background {
+    background-color: green;
+    display: grid;
+    place-items: center;
+   
+}
+
+.yellow-background {
+    background-color: yellow;
+    display: grid;
+    place-items: center;
+   
+}
+
+.pink-background {
+    background-color: fuchsia;
+    display: grid;
+    place-items: center;
+    height: 50vh;
+   
+}
+
+.blue-background {
+    background-color: blue;
+    display: grid;
+    place-items: center;
+    height: 35vh;
+    
+}
+
+.red-background {
+    background-color: red;
+    display: grid;
+    place-items: center;
+    height: 17.5vh;
+    
+}
+
+.lightgreen-background {
+    background-color: lightgreen;
+    display: grid;
+    place-items: center;
+    height: 17.5vh;
+}
+
+.purple-background {
+    background-color: purple;
+    display: grid;
+    place-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}
