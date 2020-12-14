@@ -22,17 +22,13 @@ const criarPost = () => {
     
     primeiroInput.value = ""
     segundoInput.value = ""
-    terceiroInput.value = ""
-
-    console.log(postsCriados)
-
-    
+    terceiroInput.value = ""    
 }
 
 
 const postagemFeita = () => {
     let sectionPost = document.getElementById("container-de-posts")
-    sectionPost.innerHTML = infoUsuario.titulo
+    sectionPost.innerHTML = postsCriados.titulo
 }
 
 // não sei porquê ele imprime undefined na section AAAA

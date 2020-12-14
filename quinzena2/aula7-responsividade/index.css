@@ -70,8 +70,7 @@ div {
 
 @media screen and (max-width: 768px) {
     #main-container {
-        grid-template-rows: repeat(9, 20vh);
-        grid-template-columns: repeat(2fr);
+        
     }
 }
 
