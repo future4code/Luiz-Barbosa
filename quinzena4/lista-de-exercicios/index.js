@@ -145,3 +145,57 @@ Por exemplo: */
 // }
 
 // fazAlert()
+
+// ====================================================================================================================
+/* Exercício Objetos
+1. Explique com as suas palavras o que são e quando podemos/devemos utilizar arrays e objetos.
+R: Devemos usar quando é necessário armazenar mais de um dado dentro de uma mesma variável, pois fica mais organizado do que criar diversas variáveis com nomes diferentes pra armazenar informações relacionadas.
+
+2. Crie uma função chamada `criaRetangulo` que recebe como parâmetros dois lados (`lado1` e `lado2`) e retorna um objeto com 4 informações: largura (`lado1`), altura (`lado2`), perímetro (`2 * (lado1 + lado2)`) e área (`lado1 * lado2`).
+*/
+
+// const criaRetangulo = (lado1, lado2) => {
+//     let retangulo = {
+//         largura : lado1,
+//         altura : lado2,
+//         perimetro: (2*(lado1 + lado2)),
+//         area: lado1*lado2
+//     }
+    
+//     return retangulo
+// }
+
+// let mostraRetangulo = criaRetangulo(100, 50);
+// console.log(mostraRetangulo)
+
+/*
+3. Crie um objeto para representar seu filme favorito. Ele deve ter as seguintes propriedades: título, ano, diretor e atores/atrizes (lista com pelo menos 2 atores/atrizes). Imprima na tela a seguinte string, baseada nos valores do objeto:
+`Venha assistir ao filme NOME DO FILME, de ANO, dirigido por DIRETOR e estrelado por ATOR 1, ATRIZ 2, ATOR n`. A lista de atores/atrizes deve ser impressa inteira, independente do tamanho da lista.
+*/
+
+// const filme = {
+//     titulo: "The Perks of Being a Wallflower",
+//     ano: 2012,
+//     diretor: "Stephen Chbosky",
+//     elenco: ["Emma Watson", "Logan Lerman", "Ezra Miller", "Nina Dobrev"]
+// }
+
+// console.log(`Venha assistir ao filme ${filme.titulo}, de ${filme.ano}, dirigido por ${filme.diretor} e estrelado por ${filme.elenco[0]}, ${filme.elenco[1]}, ${filme.elenco[2]} e ${filme.elenco[3]}`)
+
+/*
+4. Crie um objeto que represente uma pessoa qualquer, com as propriedades de `nome`, `idade`, `email` e `endereco`. Crie uma função chamada `anonimizarPessoa`, que deverá retornar um **novo** objeto com as mesmas propriedades, mas com a string `ANÔNIMO` no lugar do nome. O objeto original deve ser mantido com o nome da pessoa.
+*/
+
+const pessoaQualquer = {
+    nome: "Ronald Bilius Weasley",
+    idade: 40,
+    email: "ronweasley@hogwartsmail.com",
+    endereco: "The Burrow"
+}
+
+const anonimizarPessoa = {
+    ... pessoaQualquer,
+    nome: "ANÔNIMO"
+}
+
+console.log(anonimizarPessoa.nome)
