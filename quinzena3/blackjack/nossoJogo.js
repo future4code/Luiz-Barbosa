@@ -1,31 +1,49 @@
+let primeiraUsuario;
+let segundaUsuario;
+let primeiraComputador;
+let segundaComputador;
+let result = confirm("Quer iniciar uma nova rodada?");
+let pontosUsuario;
+let pontosComputador;
+// console.log(result)
 
-if(confirm("Quer iniciar uma nova rodada?")) {
-	console.log("Bem vindo ao jogo de Blackjack!");
+
+const tiraCartas = () => {
+   primeiraUsuario = comprarCarta();
+   segundaUsuario = comprarCarta();
+   primeiraComputador = comprarCarta();
+   segundaComputador = comprarCarta();
+   calcularTotal();
+}
+
+const calcularTotal = () => {
+   pontosUsuario = primeiraUsuario.valor + segundaUsuario.valor;
+   pontosComputador = primeiraComputador.valor + segundaComputador.valor;
+   console.log("Usuário - cartas: " + primeiraUsuario.texto, segundaUsuario.texto + "- pontuação " + pontosUsuario);
+   console.log("Computador - cartas: " + primeiraComputador.texto, segundaComputador.texto + "- pontuação " + pontosComputador);
+   mensagemResultado();
+}
+
+
+const mensagemResultado = () => {
+
+   if (pontosUsuario === pontosComputador) {
+      console.log("Empatou!")
+   } else if (pontosComputador > pontosUsuario) {
+      console.log("O computador venceu!")
+      } else {
+      console.log("O usuário venceu!")
+      } 
+}
+
+if(result) {
+   console.log("Bem vindo ao jogo de Blackjack!");
+   tiraCartas()
 } else {
    console.log("O jogo acabou.")
 }
 
-const primeiraUsuario = comprarCarta();
-const segundaUsuario = comprarCarta();
-const pontosUsuario = primeiraUsuario.valor + segundaUsuario.valor;
-const primeiraComputador = comprarCarta();
-const segundaComputador = comprarCarta();
-const pontosComputador = primeiraComputador.valor + segundaComputador.valor;
 
-
-console.log("Usuário - cartas: " + primeiraUsuario.texto, segundaUsuario.texto + "- pontuação " + pontosUsuario);
-console.log("Computador - cartas: " + primeiraComputador.texto, segundaComputador.texto + "- pontuação " + pontosComputador) 
-
-
-if (pontosUsuario > pontosComputador) {
-   console.log("O usuário ganhou!")
-} else if (pontosComputador < pontosComputador) {
-   console.log("O computador venceu!")
-   } else if (pontosComputador == pontosUsuario) {
-      console.log("Empatou")
-   } else {
-      console.log("O jogo acabou")
-   }
 
 
    // Estou com esse problema infernal onde de alguma forma o jogo dá empate mesmo com os numeros sendo diferentes!! Nada resolve!!!

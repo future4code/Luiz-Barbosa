@@ -19,15 +19,17 @@ const pontosUsuario = primeiraUsuario.valor + segundaUsuario.valor;
 const primeiraComputador = comprarCarta();
 const segundaComputador = comprarCarta();
 const pontosComputador = primeiraComputador.valor + segundaComputador.valor;
+let result = confirm("Quer iniciar uma nova rodada?");
 //Aqui o jogo inicia.
-if(confirm("Quer iniciar uma nova rodada?")) {
-	console.log("Bem vindo ao jogo de Blackjack!");
+if(result) {
+   console.log("Bem vindo ao jogo de Blackjack!");
+   tiraCartas()
 } else {
    console.log("O jogo acabou.")
 }
 
 // Se as primeiras cartas forem A, sortear de novo
-if (primeiraComputador || primeiraUsuario === "A") {
+if (primeiraComputador === "A" && segundaComputador === "A") {
     comprarCarta();
    } 
 
