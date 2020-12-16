@@ -120,3 +120,28 @@ Por exemplo: */
     
     // let diferencaAritmetica = diferenca(primeiroNumero, segundoNumero)
     // console.log(`A diferença entre eles é ${diferencaAritmetica}`)
+
+    //======================================================================================================================
+    // Exercicio de funções
+    /*  1 - Escreva uma função que receba um array de números e imprima na tela o segundo maior e o segundo menor número. Em seguida, invoque essa função. (Não é permitido usar funções de ordenação de vetores.)*/
+
+    // let arrayDeNumeros = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+
+    // const maiorEMenor = () => {
+    //     let maior = 20
+    //     let menor = 2
+    //     for(let i = 0; i >= arrayDeNumeros.length; i++) {
+    //         if (arrayDeNumeros[i]> maior) {
+    //             maior = arrayDeNumeros[i]
+    //         } else if (arrayDeNumeros[i] <)
+    //     }
+
+    //não entendi isso.
+
+/*  Escreva uma função não nomeada que faça um alert("Hello Future4");. Em seguida, invoque essa função.*/
+
+// let fazAlert = () => {
+//     alert("Hello Future4")
+// }
+
+// fazAlert()
