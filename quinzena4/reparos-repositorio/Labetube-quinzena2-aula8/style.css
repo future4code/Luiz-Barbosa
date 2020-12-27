@@ -2,8 +2,32 @@
     margin: 0;
     padding: 0;
 }
+header {
+  display: flex; 
+  background-color: orangered; 
+  place-content: space-around;
+  place-items: center;
+  font-size: small;
+  height: 10vh;
+
+
+}
 
 main {
     display: flex;
+    width: 100vw;
+    height: 100vh;
     flex-wrap: wrap;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+video {
+    width: 20vw;
+    height: 50vh;
+    margin: 10px;
+    border: 1px solid black;
 }
