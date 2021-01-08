@@ -6,6 +6,9 @@ import {IconeComContador} from '../IconeComContador/IconeComContador'
 import iconeCoracaoBranco from '../../img/favorite-white.svg'
 import iconeCoracaoPreto from '../../img/favorite.svg'
 import iconeComentario from '../../img/comment_icon.svg'
+import salvarBranco from '../../img/bookmark_border-24px.svg'
+import salvarPreto from '../../img/bookmark-24px.svg'
+import iconeCompartilhar from '../../img/share-24px.svg'
 import {SecaoComentario} from '../SecaoComentario/SecaoComentario'
 
 class Post extends React.Component {
@@ -13,7 +16,9 @@ class Post extends React.Component {
     curtido: false,
     numeroCurtidas: 0,
     comentando: false,
-    numeroComentarios: 0
+    numeroComentarios: 0,
+    salvo: false,
+    compartilhando: false
   }
 
   onClickCurtida = () => {
@@ -28,9 +33,17 @@ class Post extends React.Component {
       }
       this.setState(novoEstado)
     }
-    console.log('Curtiu!')
   }
 
+
+//BOTAO SALVAR
+  onClickSalvar = () => {
+    this.setState({
+      salvo: true,    
+      salvo: !this.state.salvo 
+    })
+    
+  }
 
   onClickComentario = () => {
     this.setState({
@@ -46,6 +59,13 @@ class Post extends React.Component {
     })
   }
 
+    onClickCompartilhar = () => {
+      this.setState({
+        compartilhando: true
+      })
+      console.log("funfoi")
+    }
+  
   render() {
     let iconeCurtida
 
@@ -60,6 +80,22 @@ class Post extends React.Component {
     if(this.state.comentando) {
       componenteComentario = <SecaoComentario aoEnviar={this.aoEnviarComentario}/>
     }
+
+    let iconeSalvar
+
+    if(this.state.salvo) {
+      iconeSalvar = salvarPreto
+    } else {
+      iconeSalvar = salvarBranco
+    }
+
+    let componenteCompartilhar
+
+    if(this.state.compartilhando) {
+      componenteCompartilhar = console.log("funfou")
+      
+    }
+   
 
     return <div className={'post-container'}>
       <div className={'post-header'}>
@@ -77,10 +113,21 @@ class Post extends React.Component {
         />
 
         <IconeComContador
+        icone={iconeSalvar}
+        onClickIcone={this.onClickSalvar}
+        />
+
+        <IconeComContador
           icone={iconeComentario}
           onClickIcone={this.onClickComentario}
           valorContador={this.state.numeroComentarios}
         />
+
+        <IconeComContador
+        icone={iconeCompartilhar}
+        onClickCompartilha = {this.onClickCompartilhar}
+        />
+
       </div>
       {componenteComentario}
     </div>
