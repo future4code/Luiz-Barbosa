@@ -1,78 +1,151 @@
-body {
-    width: 100vw;
-    height: 100vh;
-    padding: 0;
-    margin: 0;
+* {
+ margin: 0px;
+ padding: 0;
 }
 
 #main-container {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(7, 20vh);
-    gap: 16px;
-    
+  display: flex;
+  flex-wrap: wrap;
+  place-content: space-around;
+
+  
 }
 
 div {
     border: 1px solid black;
+    
 }
 
 #first-block {
-    background-color: red;   
-    grid-column: 1/7;
-    grid-row: 1/2;
+    background-color: red;
+    width: 100vw;
+    height: 20vh;
+   
 }
 
 .blue-block {
     background-color: blue;
-    grid-column: span 2;
-    justify-content: center;
-    align-items: center;
-    display: grid;
+    width: 25vw;
+    height: 20vh;
+    margin: 5px;
+    display: flex;
+    place-content: center;
+    place-items: center;
     
 }
 
 .yellow-block {
     background-color: yellow;
-    grid-column: span 2;
-    justify-content: center;
-    align-items: center;
-    display: grid;
+    width: 25vw;
+    height: 20vh;
+    margin: 5px;
+    display: flex;
+    place-content: center;
+    place-items: center;
    
 }
 
 .green-block {
     background-color: green;
-    grid-column: span 2;
-    justify-content: center;
-    align-items: center;
-    display: grid;
+    width: 25vw;
+    height: 20vh;
+    margin: 5px;
+    display: flex;
+    place-content: center;
+    place-items: center;
 }
 
 .black-block {
     background-color: black;
     color: white;
-    grid-column: span 3;
-    grid-row: span 2;
-    justify-content: center;
-    align-items: center;
-    display: grid;
+    width: 40vw;
+    height: 30vh;
+    margin: 5px;
+    display: flex;
+    place-content: center;
+    place-items: center;
+   
     
 }
 
 .white-block {
     background-color: white;
-    grid-column: span 2;
-    justify-content: center;
-    align-items: center;
-    display: grid;
+    width: 25vw;
+    height: 20vh;
+    margin: 5px;
+    display: flex;
+    place-content: center;
+    place-items: center;
 }
 
-@media screen and (max-width: 768px) {
-    #main-container {
-        grid-template-rows: repeat(9, 20vh);
-        grid-template-columns: repeat(2fr);
+/* TELA DE IPAD */
+@media screen and (max-device-width: 768px) {
+    .green-block {
+        display: flex;
+        flex: 1;
+        flex-basis: 100vw;
+        flex-wrap: nowrap;
+        
+    }
+    .blue-block {
+        display: flex;
+        flex: 1;
+        flex-basis: 25%;
+        margin: 10px;
+    }
+    .yellow-block {
+        display: flex;
+        flex: 1;
+        flex-basis: 25%;
+        margin: 10px;
+    }
+    .white-block {
+        display: flex;
+        flex: 1;
+        flex-basis: 40%;
+        margin: 10px;
+        flex-wrap: wrap;
+    }
+
+}
+
+/* TELA DE CELULAR */
+@media screen and (max-device-width: 320px){
+    .green-block {
+        display: flex;
+        flex: 1;
+        flex-basis: 100%;
+        margin: 10px;
+        flex-wrap: wrap;
+    }
+    .blue-block {
+        display: flex;
+        flex: 1;
+        flex-basis: 100%;
+        margin: 10px;
+        flex-wrap: wrap; 
+    }
+    .yellow-block {
+        display: flex;
+        flex: 1;
+        flex-basis: 100%;
+        margin: 10px;
+        flex-wrap: wrap;
+    }
+    .black-block {
+        display: flex;
+        flex: 1;
+        flex-basis: 100%;
+        margin: 10px;
+        flex-wrap: wrap;
+        width: 25vw;
+    height: 20vh;
+    }
+    .white-block {
+        display: flex;
+        flex: 1;
+        flex-basis: 100%;
+        margin: 10px;
+        flex-wrap: wrap;
     }
 }
-
-
