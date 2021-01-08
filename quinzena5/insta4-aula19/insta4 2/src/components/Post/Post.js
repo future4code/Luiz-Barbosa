@@ -36,6 +36,7 @@ class Post extends React.Component {
     this.setState({
       comentando: !this.state.comentando //o que
     })
+
   }
 
   aoEnviarComentario = () => {
