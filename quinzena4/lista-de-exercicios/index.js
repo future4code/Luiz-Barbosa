@@ -267,15 +267,14 @@ b) Faça uma função que retorne um novo array só com as crianças/adolescente
 
 //c) Escreva uma função que retorne um array de strings dizendo: "${número} é par/impar". Isto é: ["1 é impar", "2 é par", "3 é impar", "4 é par", "5 é impar", "6 é par"] 
 
-// const array = [1, 2, 3, 4, 5, 6]
-// let parouImpar = array.map((item, index, array) => {
-//     if(item % 2 === 0) {
-//             console.log(`${item} é par`)
-//         } else {
-//             console.log(`${item} é ímpar`)
-//         }
-//     return console.log(item.toString())
-// })
-    
-//não consegui
+const arrayDeNumeros = [1, 2, 3, 4, 5, 6]
+let parouImpar = arrayDeNumeros.map((item, index, array) => {
+    if(item % 2 === 0) {
+            return `${item} é par`
+        } else {
+            return `${item} é ímpar`
+        }
+})
+
+console.log(parouImpar)
 
