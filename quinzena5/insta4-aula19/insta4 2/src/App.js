@@ -1,26 +1,46 @@
 import React from 'react';
 import './App.css';
 import Post from './components/Post/Post';
+import huguinhoPerfil from './img/huguinho.png'
+import huguinhoFoto from './img/huguinho-foto.png'
+import luisinho from './img/Luisinho.png'
+import zezinhoPerfil from './img/zezinhoPerfil.png'
 
 class App extends React.Component {
+  state = {
+  postagens:
+  [
+    
+    {
+      nomeUsuario: "Huguinho",
+      fotoUsuario: huguinhoPerfil,
+      fotoPost: huguinhoFoto
+    },
+    {
+      nomeUsuario: "Luizinho",
+      fotoUsuario: luisinho,
+      fotoPost: luisinho
+    },
+    {
+      nomeUsuario: "Zezinho",
+      fotoUsuario: zezinhoPerfil,
+      fotoPost: zezinhoPerfil
+    }
+  ]
+};
   render() {
+    const listaDeComponentes = this.state.postagens.map((post) => {
+      return (
+        <Post
+            nomeUsuario={post.nomeUsuario}
+            fotoUsuario={post.fotoUsuario}
+            fotoPost={post.fotoPost}
+        />
+      );
+    });
     return (
-      <div className={'app-container'}>
-        <Post
-          nomeUsuario={'Huguinho'}
-          fotoUsuario={'https://i.pinimg.com/originals/29/60/24/2960243be75f23399d095ebafc32f51e.png'}
-          fotoPost={'https://imagensemoldes.com.br/wp-content/uploads/2020/03/Mickey-Louie-Dewey-Huey-Daisy-Tio-Patinhas-PNG-04.png'}
-        />
-        <Post
-          nomeUsuario={'Luizinho'}
-          fotoUsuario={'https://vignette.wikia.nocookie.net/ducktales/images/3/38/Luisinho.png/revision/latest?cb=20180421214835&path-prefix=pt-br'}
-          fotoPost={'https://vignette.wikia.nocookie.net/ducktales/images/3/38/Luisinho.png/revision/latest?cb=20180421214835&path-prefix=pt-br'}
-        />
-        <Post
-          nomeUsuario={'Zezinho'}
-          fotoUsuario={'https://vignette.wikia.nocookie.net/ducktales/images/4/43/Zezinho_Ducktales.png/revision/latest?cb=20180421202122&path-prefix=pt-br'}
-          fotoPost={'https://vignette.wikia.nocookie.net/ducktales/images/4/43/Zezinho_Ducktales.png/revision/latest?cb=20180421202122&path-prefix=pt-br'}
-        />
+      <div className={"app-container"}>
+        {listaDeComponentes}
       </div>
     );
   }
