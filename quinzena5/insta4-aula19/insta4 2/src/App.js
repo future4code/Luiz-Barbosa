@@ -75,9 +75,9 @@ onClickPostar = () => {
     NovoFotoPost: this.state.NovoFotoPost
   };
 
-  const postagem = [...this.state, novaPostagem];
+  const postagem = [...this.state.postagens, novaPostagem];
 
-  this.setState({ state: postagem });
+  this.setState({ postagens: postagem });
 };
   render() {
     const listaDeComponentes = this.state.postagens.map((post) => {
