@@ -1,6 +1,23 @@
 import React from 'react'
-import TelaCadastro from './components/telaCadastro.js'
+// import TelaCadastro from './components/telaCadastro.js'
 import styled from 'styled-components'
+import axios from 'axios'
+
+const body = {
+  "name": "Kanye West",
+  "email": "kanyesux@hotmail.com"
+}
+
+axios.get('https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users', body, {
+  headers: {
+    "Authorization" : "luiz-pereira-muyembe"
+  }
+}).then((response) => {
+  console.log(response.data)
+}).catch((error) => {
+  console.log(error.response.data)
+})
+
 
 const MainContainer = styled.div `
   height: 100vh;
