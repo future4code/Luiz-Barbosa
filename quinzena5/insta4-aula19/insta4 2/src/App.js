@@ -45,11 +45,6 @@ class App extends React.Component {
       nomeUsuario: "Zezinho",
       fotoUsuario: zezinhoPerfil,
       fotoPost: zezinhoPerfil
-    },
-    {
-      nomeUsuario: this.state.postagens.NovoNomeUsuario,
-      fotoUsuario: this.state.postagens.NovoFotoUsuario,
-      fotoPost: this.state.postagens.fotoPost
     }
   ],
   NovoNomeUsuario: "",
@@ -68,19 +63,25 @@ onChangeInputFoto = (event) => {
 }
 
 onClickPostar = () => {
-  console.log()
   const novaPostagem = {
-    NovoNomeUsuario: this.state.NovoNomeUsuario,
-    NovoFotoUsuario: this.state.NovoFotoUsuario,
-    NovoFotoPost: this.state.NovoFotoPost
+    nomeUsuario: this.state.NovoNomeUsuario,
+    fotoUsuario: this.state.NovoFotoUsuario,
+    fotoPost: this.state.NovoFotoPost
   };
 
-  const postagem = [...this.state, novaPostagem];
+  const postagem = [...this.state.postagens, novaPostagem];
 
-  this.setState({ state: postagem });
+  this.setState({ postagens: postagem });
+
+  this.setState({
+    NovoNomeUsuario: "",
+    NovoFotoUsuario: "",
+    NovoFotoPost: ""
+  })
 };
   render() {
     const listaDeComponentes = this.state.postagens.map((post) => {
+      console.log(post)
       return (
         <Post
             nomeUsuario={post.nomeUsuario}

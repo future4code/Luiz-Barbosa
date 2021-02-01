@@ -95,7 +95,7 @@ class Post extends React.Component {
       componenteCompartilhar = console.log("funfou")
       
     }
-   
+    console.log(this.props)
 
     return <div className={'post-container'}>
       <div className={'post-header'}>
@@ -105,7 +105,7 @@ class Post extends React.Component {
 
       <img className={'post-photo'} src={this.props.fotoPost} alt={'Imagem do post'}/>
 
-      <div className={'post-footer'}>
+       <div className={'post-footer'}>
         <IconeComContador
           icone={iconeCurtida}
           onClickIcone={this.onClickCurtida}
