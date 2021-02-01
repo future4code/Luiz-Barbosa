@@ -8,7 +8,7 @@ const body = {
   "email": "kanyesux@hotmail.com"
 }
 
-axios.get('https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users', body, {
+axios.post('https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users', body, {
   headers: {
     "Authorization" : "luiz-pereira-muyembe"
   }
