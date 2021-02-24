@@ -4,6 +4,10 @@ import {ContainerPrincipal, PrimeiroContainer, MainDiv, SegundoContainer, Tercei
 import CardsArtistas from './components/mainMenu/cardsArtistas/cardsArtistas.js'
 import MainMenu from './components/mainMenu/mainMenu.js'
 import CriarPlaylist from './components/mainMenu/criarPlaylists/criarPlaylist.js'
+import {BASE_URL} from './requisicoes/requisicoes'
+import {axiosConfig} from './requisicoes/requisicoes'
+import axios from 'axios'
+import BuscarPlaylists from  './components/mainMenu/playlists/playlists'
 
 
 
@@ -13,16 +17,16 @@ export class App extends React.Component {
     paginaPrincipal: false,
     playlists: false,
     novaPlaylistNome: '',
-    arrayDePlaylists: []
+    arrayDePlaylists: [],
+    buscaDePlaylists: ''
     
   }
 
-
+//=================== TROCA DE PAGINAS PARA RENDERIZAÇÃO CONDICIONAL ===============================================
   mudaParaPaginaPrincipal = () => {
     let novaPagina = this.state.paginaPrincipal
     novaPagina = !novaPagina
     this.setState({paginaPrincipal: novaPagina})
-    console.log("funfou pra home")
     
   }
 
@@ -30,29 +34,55 @@ export class App extends React.Component {
     let listaPlaylists = this.state.playlists
     listaPlaylists = !listaPlaylists
     this.setState({playlists: listaPlaylists})
-    console.log("funfou pra lista")
   }
 
   mudaParaCriarPlaylists = () => {
     let novaPlaylist = this.state.criarPlaylist
     novaPlaylist = !novaPlaylist
     this.setState({criarPlaylist: novaPlaylist})
-    console.log("funfou pra criar")
   }
+
+  //===============ONCHANGES INPUTS CONTROLADOS====================================================
 
   onChangeInput = (event) => {
     this.setState({novaPlaylistNome: event.target.value})
   }
 
+  // onChangeBusca = (event) => {
+  //   this.setState({buscaDePlaylists: event.target.value})
+  // }
+
+  //=====================REQUISIÇÕES DE API =======================================================
+
   onClickCriar = () => {
-    console.log('funcionou!')
-  }
+    const body = {
+		name: this.state.novaPlaylistNome
+	}
 
+	axios.post(`${BASE_URL}/playlists`, body, axiosConfig).then(() => {
+		alert(`A Playlist ${body.name} foi criado!`)
+	}).catch((erro) => {
+		alert(erro.message)
+	})
 
+  this.setState({novaPlaylistNome: ''})
+}
+
+onClickBuscar = () => {
+axios.get(`${BASE_URL}/playlists`, axiosConfig).then((response) => {
+  console.log(response)
+  this.setState({arrayDePlaylists: response.data.result.list})
+}).catch((erro) => {
+  alert(erro.message)
+})
+
+}
+
+arrayDePlaylists = this.state.arrayDePlaylists.map((item) => {
+  return <li>{item}</li>
+})
 
   render() {
-
-    console.log(this.state.novaPlaylistNome)
     return (
       <ContainerPrincipal className="App">
         <PrimeiroContainer>
@@ -65,7 +95,9 @@ export class App extends React.Component {
 
         <MainDiv>
           <CardsArtistas/>
-          {this.state.criarPlaylist ? <CriarPlaylist valorInput={this.state.novaPlaylistNome} input={this.onChangeInput} /> : ''}
+          {this.state.criarPlaylist ? <CriarPlaylist onClickCriar={this.onClickCriar} valorInput={this.state.novaPlaylistNome} input={this.onChangeInput} /> : ''}
+          {this.state.playlists ? <BuscarPlaylists onClickBuscar={this.onClickBuscar} /> : ''}
+          {this.arrayDePlaylists}
         </MainDiv>
         
         <SegundoContainer></SegundoContainer>
