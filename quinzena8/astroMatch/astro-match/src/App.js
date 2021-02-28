@@ -1,4 +1,4 @@
-import "../src/App.css";
+import { useEffect, useState } from "react";
 import ContainerPai from "./appStyle";
 import {ContainerMatches, ImagensMatches, NomesMatches, ContainerDivsMap} from './appStyle'
 import Image from "./components/image/image";
@@ -9,7 +9,7 @@ import {
   axiosConfig,
   axiosConfigPost,
 } from "./requisicoes/requisicoes";
-import { useEffect, useState } from "react";
+
 
 import Header from "./components/header/header";
 function App() {
@@ -45,13 +45,20 @@ function App() {
       .post(`${BASE_URL}/choose-person`, body, axiosConfigPost)
       .then((response) => {
         setWasLiked(true)
-        console.log(response);
         setMatches(response)
       })
       .catch((error) => {
         console.log(error);
       });
+
+      if(Notification.permission === 'granted' && wasLiked) {
+        new Notification('Deu Match!')
+    }
   };
+
+  useEffect(() => {
+    Notification.requestPermission();
+}, [])
 
   //Uma pergunta, porque ficou meio confuso pra mim esse pedaço: os perfis já vem setados uns com true e outros com false da API? Porque às vezes dá match e às vezes não. Às vezes o setWasLiked seta o estado como true e às vezes não. :/ 
   // Pelo menos, da forma que eu deixei aqui, às vezes dá match com os perfis. Se eu deixasse a linha 47 com setWasLiked(response.data.isMatch), nunca dá match nenhum por algum motivo...
@@ -60,7 +67,6 @@ function App() {
     axios
       .get(`${BASE_URL}/matches`)
       .then((response) => {
-        console.log(response);
         setMostrarMatches(!mostrarMatches);
         setListaDeMatches(response.data.matches);
       })
@@ -73,7 +79,7 @@ function App() {
     axios
       .put(`${BASE_URL}/clear`, axiosConfigPost)
       .then((response) => {
-        console.log(response);
+        alert('Matches Apagados')
       })
       .catch((error) => {
         console.log(error);
@@ -112,8 +118,3 @@ function App() {
 }
 
 export default App;
-
-// colors:
-// #f6f3f2
-// #ff5678
-// #000000
