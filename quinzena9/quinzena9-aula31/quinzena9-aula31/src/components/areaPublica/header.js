@@ -3,7 +3,7 @@ import {StyledHeader, DivLogo, DivNavBar, NavBar, Lista, StyledButton} from './h
 
 
 
-function Header() {
+const Header = (props) => {
   return (
     <div>
       <StyledHeader>
@@ -14,7 +14,7 @@ function Header() {
               <Lista>Viagens</Lista>
               <Lista>Formulário</Lista>
           </NavBar>
-          <StyledButton>Login</StyledButton>
+          <StyledButton onClick={props.onClickLogin}>Login</StyledButton>
           <StyledButton>Register</StyledButton>
         </DivNavBar>
       </StyledHeader>

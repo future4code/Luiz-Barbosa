@@ -2,7 +2,7 @@ import React from 'react'
 import {StyledContainer, Texto, MainTelaPrincipal,StyledInput, StyledButton} from './conteudoMainStyles'
 
 
-function Main() {
+const Main = () => {
   return (
     <StyledContainer>
       <MainTelaPrincipal>
