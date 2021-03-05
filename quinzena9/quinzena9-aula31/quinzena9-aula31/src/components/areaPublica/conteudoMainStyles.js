@@ -40,5 +40,6 @@ export const StyledInput = styled.input`
     height: 5vh;
     border: none;
     border-radius: 5px;
+    background-color: #dfd8da;
 `
 
