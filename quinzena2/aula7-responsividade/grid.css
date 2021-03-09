@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#main-container {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(6, 1fr);
+  /* grid-template-columns: repeat(auto-fit, minmax(1fr, repeat(6, 1fr))); */
+  grid-template-rows: repeat(5, 1fr);
+  margin: 5px;
+  height: 15vh;
+}
+
+div {
+  border: 1px solid black;
+}
+
+#first-block {
+  background-color: red;
+  grid-column: 1/7;
+  height: 15vh;
+}
+
+.blue-block {
+  background-color: blue;
+  display: grid;
+  place-items: center;
+  grid-column: 1/3;
+  height: 20vh;
+}
+
+.yellow-block {
+  background-color: yellow;
+  display: grid;
+  place-items: center;
+  grid-column: 3/5;
+  height: 20vh;
+}
+
+.green-block {
+  background-color: green;
+  display: grid;
+  place-items: center;
+  grid-column: 5/7;
+  height: 20vh;
+}
+
+.black-block1 {
+  background-color: black;
+  display: grid;
+  place-items: center;
+  grid-gap: 1rem;
+  grid-column: 1/4;
+  height: 30vh;
+}
+.black-block2 {
+    background-color: black;
+    display: grid;
+    place-items: center;
+    grid-gap: 1rem;
+    grid-column: 4/7;
+    height: 30vh;
+  }
+
+.white-block1 {
+  background-color: white;
+  display: grid;
+  place-items: center;
+  height: 20vh;
+  grid-column: 1/3;
+}
+.white-block2 {
+    background-color: white;
+    display: grid;
+    place-items: center;
+    height: 20vh;
+    grid-column: 3/5;
+  }
+  .white-block3 {
+    background-color: white;
+    display: grid;
+    place-items: center;
+    height: 20vh;
+    grid-column: 5/7;
+  }
+
+/* TELA DE IPAD */
+@media screen and (max-device-width: 768px) {
+  .green-block {
+    display: grid;
+    place-items: center;
+    grid-column: 1/7;
+    height: 20vh;
+}
+  .blue-block {
+    display: grid;
+    place-items: center;
+    grid-column: 1/4;
+    height: 20vh;
+  }
+  .yellow-block {
+    display: grid;
+    place-items: center;
+    grid-column: 4/7;
+    height: 20vh;
+  }
+  .black-block1 {
+  background-color: black;
+  display: grid;
+  place-items: center;
+  grid-gap: 1rem;
+  grid-column: 1/4;
+  height: 30vh;
+}
+.black-block2 {
+    background-color: black;
+    display: grid;
+    place-items: center;
+    grid-gap: 1rem;
+    grid-column: 4/7;
+    height: 30vh;
+  }
+
+  .white-block1 {
+    background-color: white;
+    display: grid;
+    place-items: center;
+    height: 20vh;
+    grid-column: 1/4;
+  }
+  .white-block2 {
+      background-color: white;
+      display: grid;
+      place-items: center;
+      height: 20vh;
+      grid-column: 4/7;
+    }
+    .white-block3 {
+      background-color: white;
+      display: grid;
+      place-items: center;
+      height: 20vh;
+      grid-column: 1/7;
+    }
+  }
+
+/* TELA DE CELULAR */
+@media screen and (max-device-width: 320px) {
+  .green-block {
+    display: grid;
+    place-items: center;
+    height: 20vh;
+    grid-column: 1/7;
+  }
+  .blue-block {
+    display: grid;
+    place-items: center;
+    height: 20vh;
+    grid-column: 1/7;
+  }
+  .yellow-block {
+    display: grid;
+    place-items: center;
+    height: 20vh;
+    grid-column: 1/7;
+  }
+  .black-block1 {
+    background-color: black;
+    display: grid;
+    place-items: center;
+    height: 20vh;
+    grid-column: 1/7;
+  }
+  .black-block2 {
+      background-color: black;
+      display: grid;
+    place-items: center;
+    height: 20vh;
+    grid-column: 1/7;
+    }
+  .white-block1 {
+    background-color: white;
+    display: grid;
+    place-items: center;
+    height: 20vh;
+    grid-column: 1/7;
+  }
+  .white-block2 {
+      background-color: white;
+      display: grid;
+    place-items: center;
+    height: 20vh;
+    grid-column: 1/7;
+    }
+    .white-block3 {
+      background-color: white;
+      display: grid;
+    place-items: center;
+    height: 20vh;
+    grid-column: 1/7;
+    }
+}
