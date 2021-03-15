@@ -1,7 +1,7 @@
 import Header from "./components/areaPublica/header";
 import Main from "./components/areaPublica/conteudoMain";
 import { Switch, Route, BrowserRouter } from "react-router-dom";
-import LoginScreen from './components/areaPrivada/Login'
+import LoginScreen from './components/areaPublica/Login'
 import React from 'react'
 import AreaPrivada from './components/areaPrivada/AreaPrivada'
 import ListaIncritos from './components/areaPrivada/ListaDeInscritos'

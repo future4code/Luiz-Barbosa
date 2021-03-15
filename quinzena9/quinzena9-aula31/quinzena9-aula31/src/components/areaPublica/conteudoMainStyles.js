@@ -42,4 +42,9 @@ export const StyledInput = styled.input`
     border-radius: 5px;
     background-color: #dfd8da;
 `
-
+export const StyledForm = styled.form`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+`
