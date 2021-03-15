@@ -1,5 +1,5 @@
 import React from 'react'
-import {StyledContainer, Texto, MainTelaPrincipal,StyledInput, StyledButton} from './conteudoMainStyles'
+import {StyledContainer, Texto, MainTelaPrincipal,StyledInput, StyledButton, StyledForm} from './conteudoMainStyles'
 import {useHistory} from 'react-router-dom'
 
 
@@ -15,8 +15,10 @@ const Main = () => {
     <StyledContainer>
       <MainTelaPrincipal>
         <Texto>LABE X</Texto>
-        <StyledInput placeholder={"Insira seu e-mail"} />
+        <StyledForm>
+        <StyledInput type='email' placeholder={"Insira seu e-mail"} />
         <StyledButton onClick={onClickFazerInscricao}>Enviar</StyledButton>
+        </StyledForm>
       </MainTelaPrincipal>
     </StyledContainer>
   );

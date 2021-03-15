@@ -1,10 +1,11 @@
 import React from 'react'
+import {MainContainer} from './formularioInscricaoStyles'
 
 const Formulario = () => {
     return(
-        <div>
-            Yoleeiiiho
-        </div>
+        <MainContainer>
+            
+        </MainContainer>
     )
 }
 
