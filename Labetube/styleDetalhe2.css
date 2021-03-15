@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cccc;
+    padding-top: 2vh;
+    height: 100vh;
+}
+
+div {
+    height: 75vh;
+    width: 75vh;
+}
+video {
+    height: 100%;
+    width: 100%;
+}
+
+footer {
+    height: 10vh;
+    background-color: rosybrown;
+    display: flex;
+    place-items: center;
+    place-content: center;
+    font-weight: bold;
+    font-size: 24px;
+
+}
+
+header {
+    height: 10vh;
+    background-color: orangered;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
