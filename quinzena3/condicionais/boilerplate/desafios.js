@@ -55,13 +55,10 @@ if (etapaDoJogo === 'SF' && categoria === 1) {
 
 let valorTotal = valorIngresso*quantidadeIngressos
 
-// if(tipoDeJogo === 'internacional') {
-//     valorTotal*4.1
-// } else {
-//     valorTotal = valorIngresso
-// }
+if(tipoDeJogo === 'internacional') {
+    valorTotal *= 4.1
+} 
 
-// console.log(tipoDeJogo)
 
 
 
