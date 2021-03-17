@@ -85,3 +85,4 @@ Você deve criar variáveis para guardar o `valorMaximo` e o `valorMinimo`. Inic
 //          valorMinimo = array[i]
 //          console.log("O menor número é: " + valorMinimo)
 //      } 
+
