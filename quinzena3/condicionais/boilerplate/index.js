@@ -27,32 +27,31 @@ Vamos criar programas que lidem com entradas do usuário! Faça um programa que 
 1. Faça um `prompt` para receber a idade do usuário e guarde em uma variável.
 2. Garanta que essa variável é do tipo `Number`, você deve usar o cast para number para isso.
 3. Agora veja se essa idade do usuário corresponde à idade mínima que permite dirigir. Se sim, imprima no console `"Você pode dirigir"`, caso contrário, imprima `"Você não pode dirigir."`*/
+//  const idade = Number(prompt("Qual sua idade?"))
 
-// const idade = parseInt(prompt("Qual sua idade?"))
-
-// if (idade > 18) {
-//     console.log("Você pode dirigir!")
-// } else {
+//  if (idade > 18) {
+//      console.log("Você pode dirigir!")
+//  } else {
 //     console.log("Você não pode dirigir, você é um bebê!")
-// }
-// não sei o que acontece, mas NUNCA funcionou usar number() nenhuma das vezes que tentei escrever nos códigos até hoje...
+//  }
+//não sei o que acontece, mas NUNCA funcionou usar number() nenhuma das vezes que tentei escrever nos códigos até hoje...
 
 /*EXERCÍCIO 5
 
 Agora faça um programa que verifica que turno do dia um aluno estuda. Peça para digitar **M** (matutino) ou **V** (Vespertino) ou **N** (Noturno). Imprima no console a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!". Utilize o bloco `if/else` */
 
-/*const parteDoDia = prompt("Em qual turno você estuda? Digite M (matutino), V (vespertino) ou N, (noturno)").toUpperCase;
-console.log(typeof parteDoDia) //?????????
+//  const parteDoDia = prompt("Em qual turno você estuda? Digite M , V  ou N").toUpperCase();
+//  console.log(parteDoDia) 
 
- if (parteDoDia == "M") {
-     console.log("Bom dia!")
- } else if (parteDoDia == "V") {
-     console.log("Boa tarde!")
- } else if(parteDoDia == "N") {
-     console.log("Boa noite!")
- } else {
-      
- }*/
+//   if (parteDoDia == "M") {
+//       console.log("Bom dia!")
+//   } else if (parteDoDia == "V") {
+//       console.log("Boa tarde!")
+//  } else if(parteDoDia == "N") {
+//      console.log("Boa noite!")
+//   } else {
+//       console.log("Deu ruim")
+//  }
 
 // EXERCÍCIO 6
 
@@ -75,7 +74,7 @@ console.log(typeof parteDoDia) //?????????
 //Considere a situação: você vai no cinema com um amigo ou amiga, porém ele/ela só assiste filme do gênero fantasia e se o ingresso está abaixo de 15 reais. Faça um código que pergunta ao usuário qual o gênero de filme que vão assistir e outra pergunta sobre o preço do ingresso, então verifique se seu amigo ou amiga vai topar assistir o filme. Caso positivo, imprima no console a mensagem: "Bom filme!", caso contrário, imprima "Escolha outro filme :("
 
 // const filmeDoDia = prompt("Qual o gênero do filme?")
-// const valorDoFilme = parseInt(prompt("Quanto custa o ingresso?"));
+// const valorDoFilme = Number(prompt("Quanto custa o ingresso?"));
 
 // if (filmeDoDia === "fantasia" && valorDoFilme < 15){
 //     console.log("Bom filme!")
