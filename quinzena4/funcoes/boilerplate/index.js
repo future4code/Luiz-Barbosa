@@ -238,21 +238,21 @@ a. Escreva uma função que receba um array como parâmetro e retorne um array c
 /* c. Escreva uma função que receba um array como parâmetro e retorne o **índice** do maior número deste array.*/
 const numeros = [0, 8, 23, 16, 10, 15, 41, 12, 13]
 
-// const maiorNumero = (array) => {
-//  let resultado =  array.indexOf(41)
-//  return resultado
-// }
-// const resultado = maiorNumero(numeros) 
-// console.log(resultado)
+const maiorNumero = (array) => {
+ let resultado =  array.indexOf(41)
+ return resultado
+}
+const resultado = maiorNumero(numeros) 
+console.log(resultado)
 
 
-let maiorDoArray = numeros.reduce((accumulator, currentValue) => {
-         if (currentValue > accumulator) {
-             return currentValue
-         }
-     })
+// let maiorDoArray = numeros.reduce((accumulator, currentValue) => {
+//          if (currentValue > accumulator) {
+//              return currentValue
+//          }
+//      })
 
-     console.log(maiorDoArray)
+//      console.log(maiorDoArray)
 
 // /*d. Escreva uma função que recebe um array como parâmetro e retorne este array invertido.*/
 
