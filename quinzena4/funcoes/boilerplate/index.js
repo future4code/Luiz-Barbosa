@@ -60,26 +60,6 @@ b.Agora escreva uma função que receba 4 parâmetros que correspondem às infor
 
 // apresentacao()
 
-//Tenho uma sensação que não foi isso que o enunciado pedia. Mas funciona, what now?
-
-// const apresentacao = (nome, idade, cidade, profissao) => {
-//     let nome = ;
-//     let idade = ;
-//     let cidade = ;
-//     let profissao = ;
-
-//     If (profissao) {
-//         profissao = "sou estudante"
-//     } else {
-//         profissao = "não sou estudante"
-//     }
-    
-//     return nome, idade, cidade, profissao
-// }
-
-// apresentacao(prompt("Qual seu nome?"), Number(prompt("Qual sua idade?")), prompt("Onde você mora?"), confirm("Você é estudante?"))
-
-//dessa forma não funcionou nada, nem entrou na função, eu acho kkk 
 
 /*EXERCICIO 5
 Escreva as funções explicadas abaixo:
@@ -130,7 +110,7 @@ a. Escreva uma função que receba um array de números e devolva a quantidade d
 
 // const array = [10, 23, 45, 78, 90, 52, 35, 67, 84, 22]
 
-// const quantidadeElementos = () => {
+// const quantidadeElementos = (array) => {
 //     console.log(array.length)
 // }
 
@@ -153,26 +133,29 @@ a. Escreva uma função que receba um array de números e devolva a quantidade d
 /*c. Escreva uma função que receba um array de números e devolva a quantidade de números pares dentro dele*/
 
 // const array = [10, 23, 45, 78, 90, 52, 35, 67, 84, 22]
+// let arrayPares = []
+
 // let quantosPares = function (array) {
 //     for (item of array) {
 //         if (item % 2 === 0) {
-//             console.log(item)
-//         } else {
-//             console.log("Deu ruim")
-//         }
+//             arrayPares.push(item)
+//             console.log(item, 'é par')
+//         } 
 //     }
 // }
-
 // quantosPares(array)
+// console.log(arrayPares.length)
 
 /*d. Reescreva seu código anterior (do item c) de tal forma que ele utilize a função do item b para verificar se o número é par*/
 
 
 // const array = [10, 23, 45, 78, 90, 52, 35, 67, 84, 22]
+// let arrayPares = []
 // const quantosPares = function (array) {
 //     for (item of array) {
 //         if (item % 2 === 0) {
 //             console.log(`${item} é par`)
+//             arrayPares.push(item)
 //         } else {
 //             console.log(`${item} é ímpar`)
 //         }
@@ -180,6 +163,7 @@ a. Escreva uma função que receba um array de números e devolva a quantidade d
 // }
 
 // quantosPares(array)
+// console.log(arrayPares.length)
 
 //era isso? kkk I don't know
 
@@ -231,25 +215,54 @@ a. Escreva uma função que receba um array como parâmetro e retorne um array c
 
 // multiplicaPares(numeros)
 
-/*b. Escreva uma função que receba um array como parâmetro e retorne o maior número deste array. */
+// /*b. Escreva uma função que receba um array como parâmetro e retorne o maior número deste array. */
+
+ const numeros = [0, 8, 23, 16, 10, 15, 41, 12, 13]
+
+ function maiorNumeroDoArray(numeros) {
+     let maiorNumero = numeros[0]
+
+     for(let i = 0; i < numeros.length; i++) {
+         if(numeros[i] > maiorNumero) {
+             maiorNumero = numeros[i]
+         }
+     }
+     return maiorNumero
+ }
+
+ let resultado = maiorNumeroDoArray(numeros)
+
+ console.log(resultado)
+
+
+/* c. Escreva uma função que receba um array como parâmetro e retorne o **índice** do maior número deste array.*/
 // const numeros = [0, 8, 23, 16, 10, 15, 41, 12, 13]
 
 // const maiorNumero = (array) => {
-//     for(item of numeros) {
-//         numeros.reduce(numeros)
-//     }
-//     return Math.max(numeros)
+//  let resultado =  array.indexOf(41)
+//  return resultado
+// }
+// const resultado = maiorNumero(numeros) 
+// console.log(resultado)
+
+
+// let maiorDoArray = numeros.reduce((accumulator, currentValue) => {
+//          if (currentValue > accumulator) {
+//              return currentValue
+//          }
+//      })
+
+//      console.log(maiorDoArray)
+
+// /*d. Escreva uma função que recebe um array como parâmetro e retorne este array invertido.*/
+
+// const numeros = [0, 8, 23, 16, 10, 15, 41, 12, 13]
+
+// const numerosInvertidos = () => {
+//      numeros.reverse()
 // }
 
-// const resultado = console.log(maiorNumero(numeros))
-/* c. Escreva uma função que receba um array como parâmetro e retorne o **índice** do maior número deste array.*/
-const numeros = [0, 8, 23, 16, 10, 15, 41, 12, 13]
-const indice = (array) => {
-    for (item of numeros) {
-        console.log(item.length)
-    }
-}
 
-indice()
+// numerosInvertidos()
 
-/*d. Escreva uma função que recebe um array como parâmetro e retorne este array invertido.*/
+// console.log(numeros)
