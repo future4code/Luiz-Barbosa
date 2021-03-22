@@ -73,15 +73,16 @@ d. Escreva um programa que:
 e. Escreva um programa que imprima no console o maior e o menor números contidos no array original 
 Você deve criar variáveis para guardar o `valorMaximo` e o `valorMinimo`. Inicialize a variável `valorMaximo` com um valor que não seja maior que qualquer valor do array original e a `valorMinimo` com um valor que não seja menor que qualquer valor do array original.
 */
- const array = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
- let valorMaximo = 125;
- let valorMinimo = 22
+//  const array = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
+//  let valorMaximo = 125;
+//  let valorMinimo = 22
 
- for (let i = 0; i <= array.length; i++)
-     if (array[i] > valorMaximo) {
-        valorMaximo = array[i]
-         console.log("O maior número é " + valorMaximo) 
-     } else if (array[i] < valorMinimo) {
-         valorMinimo = array[i]
-         console.log("O menor número é: " + valorMinimo)
-     } 
+//  for (let i = 0; i <= array.length; i++)
+//      if (array[i] > valorMaximo) {
+//         valorMaximo = array[i]
+//          console.log("O maior número é " + valorMaximo) 
+//      } else if (array[i] < valorMinimo) {
+//          valorMinimo = array[i]
+//          console.log("O menor número é: " + valorMinimo)
+//      } 
+
