@@ -13,6 +13,7 @@
         <form action="">
             <label for="tarefa">Nova tarefa:</label>
             <input type="text" id="tarefa">
+            <input min="0" id="time" type="number">
             <select name="dias-semana" id="dias-semana">
                 <option value="domingo">Domingo</option>
                 <option value="segunda">Segunda-feira</option>
@@ -25,42 +26,43 @@
         </form>
 
         <button onclick="criarTarefa()">Criar tarefa</button>
+        <button onclick="apagarTarefas()">Apagar tudo</button>
         
     </header>
     <section>
-        <div class="semana">
+        <div  class="semana">
             <h3>Domingo</h3>
-            <div onclick="riscarTarefa()" id="domingo"></div>
+            <div onclick="riscarTarefaDomingo()" id="domingo"></div>
         </div>
 
         <div class="semana">
             <h3>Segunda-feira</h3>
-            <div id="segunda"></div>
+            <div onclick="riscarTarefaSegunda()" id="segunda"></div>
         </div>
 
         <div class="semana">
             <h3>Terça-feira</h3>
-            <div id="terca"></div>
+            <div onclick="riscarTarefaTerca()" id="terca"></div>
         </div>
     
         <div class="semana">
             <h3>Quarta-feira</h3>
-            <div id="quarta"></div>
+            <div onclick="riscarTarefaQuarta()" id="quarta"></div>
         </div>
     
         <div class="semana">
             <h3>Quinta-feira</h3>
-            <div id="quinta"></div>
+            <div onclick="riscarTarefaQuinta()" id="quinta"></div>
         </div>
 
         <div class="semana">                    
             <h3>Sexta-feira</h3>               
-            <div id="sexta"></div>
+            <div onclick="riscarTarefaSexta()" id="sexta"></div>
         </div>
 
         <div class="semana">
             <h3>Sábado</h3>
-            <div id="sabado"></div>
+            <div onclick="riscarTarefaSabado()" id="sabado"></div>
         </div>
     </section>
     

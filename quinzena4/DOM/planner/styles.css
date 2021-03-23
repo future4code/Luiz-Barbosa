@@ -22,3 +22,15 @@ section {
     width: 14%;
     padding: 5px;
 }
+
+/* Responsive pra celular */
+
+@media screen and (max-width: 320px) {
+    section {
+        width: 500vw;
+        height: 30vh;
+        display: block;
+        
+
+    }
+}
