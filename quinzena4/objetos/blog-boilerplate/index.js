@@ -1,34 +1,20 @@
-let postsCriados = []
-
-
-
 const criarPost = () => {
-    let tituloPost = document.getElementById("titulo-post").value
-    let autorPost = document.getElementById("autor-post").value
-    let conteudoPost = document.getElementById("conteudo-post").value
-
     const infoUsuario = {
-    titulo: tituloPost,
-    autor: autorPost,
-    conteudo: conteudoPost
+        titulo: document.getElementById('titulo-post').value,
+        autor: document.getElementById("autor-post").value,
+        conteudo: document.getElementById("conteudo-post").value,
+        imagem: document.getElementById('imagem-post').value
+    }
+
+   
+    document.getElementById('container-de-posts').innerHTML += 
+   `<div class="cardPost">
+    <p><strong> Título: </strong>${infoUsuario.titulo}<p>
+    <p><strong> Autor: </strong>${infoUsuario.autor}<p>
+    <p><strong> Conteúdo: </strong>${infoUsuario.conteudo}<p>
+    <img src=${infoUsuario.imagem} class="imagem"/>
+    </div>
+    
+    `
 }
     
-    postsCriados.push(infoUsuario)
-
-
-    let primeiroInput = document.getElementById("titulo-post")
-    let segundoInput = document.getElementById("autor-post")
-    let terceiroInput = document.getElementById("conteudo-post")
-    
-    primeiroInput.value = ""
-    segundoInput.value = ""
-    terceiroInput.value = ""    
-}
-
-
-const postagemFeita = () => {
-    let sectionPost = document.getElementById("container-de-posts")
-    sectionPost.innerHTML = postsCriados.titulo
-}
-
-// não sei porquê ele imprime undefined na section AAAA

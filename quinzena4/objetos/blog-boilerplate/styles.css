@@ -44,3 +44,15 @@ button {
     margin: 10px;
     border-top: 3px double rgb(77, 77, 77);
 }
+
+.cardPost {
+    background-color: #d4d4d4;
+    border: 1px solid black;
+    margin: 2vw;
+}
+
+.imagem {
+    height: 10vh;
+    width: 8vw;
+    border-radius: 10px;
+}
